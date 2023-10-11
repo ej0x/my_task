@@ -9,7 +9,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: tdBGColor,
+        elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Icon(
               Icons.menu,
@@ -17,9 +19,10 @@ class Home extends StatelessWidget {
               size: 30,
             ),
             Container(
-              height: 40,
-              width: 40,
+              height: 50,
+              width: 50,
               child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
                 child: Image.asset("assets/images/avatar.png"),
               ),
             )
