@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_task/constants/colors.dart';
+import 'package:my_task/widgets/tasks_item.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,10 +18,23 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             searchBox(),
-            ListView(
-              children: [
-                Container(),
-              ],
+            Expanded(
+              child: ListView(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(
+                      top: 50,
+                      bottom: 20,
+                    ),
+                    child: Text(
+                      'All Tasks',
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  tasksItem(),
+                ],
+              ),
             )
           ],
         ),
