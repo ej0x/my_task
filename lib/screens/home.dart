@@ -35,7 +35,10 @@ class Home extends StatelessWidget {
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  for (tasks todo in tasksLists) tasksItem(),
+                  for (tasks todos in tasksLists)
+                    tasksItem(
+                      todo: todos,
+                    ),
                 ],
               ),
             )
