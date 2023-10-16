@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
                   ),
                   for (tasks todos in tasksLists)
                     tasksItem(
-                      todo: todos,
+                      task: todos,
                     ),
                 ],
               ),

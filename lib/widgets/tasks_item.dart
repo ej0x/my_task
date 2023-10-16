@@ -3,8 +3,8 @@ import 'package:my_task/constants/colors.dart';
 import 'package:my_task/models/task.dart';
 
 class tasksItem extends StatelessWidget {
-  final tasks todo;
-  const tasksItem({super.key, required this.todo});
+  final tasks task;
+  const tasksItem({super.key, required this.task});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,12 @@ class tasksItem extends StatelessWidget {
           color: tdBlue,
         ),
         title: Text(
-          todo.taskText!,
-          style: const TextStyle(
-              fontSize: 16,
-              color: tdBlack,
-              decoration: TextDecoration.lineThrough),
+          task.taskText!,
+          style: TextStyle(
+            fontSize: 16,
+            color: tdBlack,
+            decoration: task.isDone ? TextDecoration.lineThrough : null,
+          ),
         ),
         trailing: Container(
           padding: const EdgeInsets.all(0),

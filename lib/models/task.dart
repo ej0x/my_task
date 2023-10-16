@@ -1,7 +1,7 @@
 class tasks {
   String? id;
   String? taskText;
-  bool? isDone;
+  bool isDone;
 
   tasks({
     required this.id,
@@ -12,7 +12,7 @@ class tasks {
   static List<tasks> taskList() {
     return [
       tasks(id: '1', taskText: 'Workout', isDone: true),
-      tasks(id: '2', taskText: 'Read'),
+      tasks(id: '2', taskText: 'Read', isDone: true),
       tasks(id: '3', taskText: 'Code'),
     ];
   }
