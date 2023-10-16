@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_task/constants/colors.dart';
+import 'package:my_task/models/task.dart';
 import 'package:my_task/widgets/tasks_item.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  Home({super.key});
+
+  final tasksLists = tasks.taskList();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class Home extends StatelessWidget {
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  tasksItem(),
+                  for (tasks todo in tasksLists) tasksItem(),
                 ],
               ),
             )
